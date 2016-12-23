@@ -25,8 +25,8 @@ then
     if test -e /var/cache/apache2; then
         chown -R $webserver_uid /var/cache/apache2
     fi
-    if test -e /var/lib/php5/session5; then
-        chown -R $webserver_uid /var/lib/php5/session5/*
+    if test -e /var/lib/php/sessions; then
+        chown -R $webserver_uid /var/lib/php/sessions/*
     fi
 fi
 

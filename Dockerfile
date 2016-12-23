@@ -1,4 +1,4 @@
-FROM debian:7.5
+FROM ubuntu:16.04
 
 MAINTAINER Joschi 127 "127.joschi@gmail.com"
 
@@ -11,6 +11,6 @@ RUN echo 'root:qweqwe'|chpasswd
 RUN echo 'webserver:qweqwe'|chpasswd
 
 # chef version is given in tugger 'lib/tugger-container-init/provision' and in tugger-stack 'Dockerfile'
-RUN curl -L https://www.chef.io/chef/install.sh | bash -s -- -v 12.14.60
+RUN curl -L https://www.chef.io/chef/install.sh | bash -s -- -v 12.17.44
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN /opt/chef/embedded/bin/gem install berkshelf

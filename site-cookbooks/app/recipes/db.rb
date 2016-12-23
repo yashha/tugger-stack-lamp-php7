@@ -6,15 +6,19 @@
 # Copyright 2015, joschi127
 #
 
+# Fix /sbin/insserv: No such file or directory
+bash "fix-sbin-insserv" do
+  code "ln -s /usr/lib/insserv/insserv /sbin/insserv"
+end
+
 # Install MySQL server & MySQL client
 mysql_service 'default' do
-  port '3306'
-  version '5.5'
-  initial_root_password node['mysql']['server_root_password']
-  mysqld_options node['mysql']['mysqld_options']
-  socket '/var/run/mysqld/mysqld.sock'
-  provider Chef::Provider::MysqlServiceSysvinit
-  action [:create, :start]
+    port '3306'
+    initial_root_password node['mysql']['server_root_password']
+    mysqld_options node['mysql']['mysqld_options']
+    socket '/var/run/mysqld/mysqld.sock'
+    service_manager "sysvinit"
+    action [:create, :start]
 end
 
 # Install PostgreSQL

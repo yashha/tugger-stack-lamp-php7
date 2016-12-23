@@ -7,8 +7,7 @@
     EnableSendfile Off
     Options FollowSymLinks
     AllowOverride <%= [@params[:allow_override] || "All" ].flatten.join " " %>
-    Order allow,deny
-    Allow from all
+    Require all granted
   </Directory>
 
   <Directory />
@@ -41,8 +40,7 @@
     EnableSendfile Off
     Options FollowSymLinks
     AllowOverride <%= [@params[:allow_override] || "All" ].flatten.join " " %>
-    Order allow,deny
-    Allow from all
+    Require all granted
   </Directory>
 
   <Directory />

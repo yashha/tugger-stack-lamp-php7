@@ -6,7 +6,6 @@
         "server_name": "webproject.local",
         "server_aliases": ["www.webproject.local"],
         "docroot": "/var/www/webproject/web",
-        "dotdeb_distribution": "wheezy-php55",
         "packages": [
             "vim",
             "git",
