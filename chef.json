@@ -72,12 +72,12 @@
         }
     },
     "nodejs": {
-        "engine": "iojs",
+        "engine": "node",
         "install_method": "binary",
-        "version": "2.3.3",
+        "version": "6.9.2",
         "binary": {
             "checksum": {
-                "linux_x64": "ff910d12c522514329e1fa21c6d24e96aefc4a361e5ef0386c676ad63d3c18e1"
+                "linux_x64": "da766edda11cc38eefb1ce29683f248f40c997c0ee2e06903b01429b4c94b71a"
             }
         },
         "npm_packages": [
