@@ -16,7 +16,6 @@ mysql_service 'default' do
     port '3306'
     initial_root_password node['mysql']['server_root_password']
     mysqld_options node['mysql']['mysqld_options']
-    socket '/var/run/mysqld/mysqld.sock'
     service_manager "sysvinit"
     action [:create, :start]
 end
