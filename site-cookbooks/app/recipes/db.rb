@@ -8,7 +8,7 @@
 
 # Fix /sbin/insserv: No such file or directory
 bash "fix-sbin-insserv" do
-  code "ln -s /usr/lib/insserv/insserv /sbin/insserv"
+  code "ln -sf /usr/lib/insserv/insserv /sbin/insserv"
 end
 
 # Create directory /var/run/mysqld
