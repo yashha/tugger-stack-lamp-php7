@@ -128,14 +128,14 @@
         "recipe[app::packages]",
         "recipe[app::web_server]",
         "recipe[app::vhost]",
+        "recipe[app::db]",
         "recipe[redisio]",
         "recipe[redisio::enable]",
-        "recipe[app::db]",
-        "recipe[java]",
         "recipe[nodejs]",
         "recipe[nodejs::npm_packages]",
         "recipe[ruby-install]",
         "recipe[ruby-install::install]",
+        "recipe[java]",
         "recipe[app::elasticsearch]"
     ]
 }
