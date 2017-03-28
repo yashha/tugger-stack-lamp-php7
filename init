@@ -32,19 +32,32 @@ fi
 
 # start services
 echo "Starting services..."
-service ssh restart
-service mysql-default restart
+# - ssh
+if test -e /var/run/sshd.pid
+then
+    rm /var/run/sshd.pid
+fi
+service ssh start
+# - mysql
+if test -e /var/run/mysql-default/mysqld.pid
+then
+    rm /var/run/mysql-default/mysqld.pid
+fi
+if test -e /var/run/mysqld/mysqld.sock
+then
+    rm /var/run/mysqld/mysqld.sock
+fi
+service mysql-default start
+# - apache2
 if test -e /var/run/apache2/apache2.pid
 then
-    # remove apache2 pid file after unclean shut down if no process running
-    if [ "$(pgrep apache2 | wc -l)" == "0" ]
-    then
-        rm /var/run/apache2/apache2.pid
-    fi
+    rm /var/run/apache2/apache2.pid
 fi
-service apache2 restart
+service apache2 start
+# - elasticsearch
 service elasticsearch stop
 service elasticsearch start
+# - redis
 if test -e /var/run/redis/6379/redis_6379.pid
 then
     rm /var/run/redis/6379/redis_6379.pid
