@@ -47,6 +47,10 @@ if test -e /var/run/mysqld/mysqld.sock
 then
     rm /var/run/mysqld/mysqld.sock
 fi
+if test -e /var/run/mysqld/mysqld.sock.lock
+then
+    rm /var/run/mysqld/mysqld.sock.lock
+fi
 service mysql-default start
 # - apache2
 if test -e /var/run/apache2/apache2.pid
