@@ -27,6 +27,8 @@ elasticsearch_configure 'my_elasticsearch' do
   memlock_limit ''
   max_map_count ''
 
+  allocated_memory '128m'
+
   configuration ({
     'node.name' => 'webproject'
   })
