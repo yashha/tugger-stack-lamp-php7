@@ -16,6 +16,7 @@ depends "mysql"
 depends "chef-sugar"
 depends "elasticsearch"
 depends "hostsfile"
+depends "git", "~> 6.0.0"
 
 %w{ debian ubuntu }.each do |os|
   supports os
