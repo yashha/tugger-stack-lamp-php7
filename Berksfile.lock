@@ -7,8 +7,8 @@ DEPENDENCIES
   composer
   elasticsearch
     git: https://github.com/elastic/cookbook-elasticsearch.git
-    revision: 39bcea55b3852dde54246186636c1a4f8e8c11fb
-    tag: v2.0.0
+    revision: 2aaa0cb953e55b608766c442c8c8c615aa692d2f
+    tag: v3.2.0
   hostsfile
   java
   mysql
@@ -48,7 +48,7 @@ GRAPH
     php (>= 0.0.0)
     windows (>= 0.0.0)
   dmg (4.0.0)
-  elasticsearch (2.0.0)
+  elasticsearch (3.2.0)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
     chef-sugar (>= 0.0.0)
