@@ -13,7 +13,8 @@
             "curl",
             "pwgen",
             "imagemagick",
-            "zip"
+            "zip",
+            "redis-server"
         ]
     },
     "apache": {
@@ -47,9 +48,6 @@
                 "login": true
             }
         ]
-    },
-    "redisio": {
-        "package_install": false
     },
     "php": {
         "tmpfs": false,
@@ -129,8 +127,6 @@
         "recipe[app::web_server]",
         "recipe[app::vhost]",
         "recipe[app::db]",
-        "recipe[redisio]",
-        "recipe[redisio::enable]",
         "recipe[nodejs]",
         "recipe[nodejs::npm_packages]",
         "recipe[ruby-install]",

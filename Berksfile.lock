@@ -17,7 +17,6 @@ DEPENDENCIES
   php
   postfix
   postgresql
-  redisio
   ruby-install
   runit
 
@@ -86,10 +85,6 @@ GRAPH
     build-essential (>= 2.0.0)
     compat_resource (>= 12.16.3)
     openssl (>= 4.0)
-  redisio (2.6.1)
-    build-essential (>= 0.0.0)
-    selinux_policy (>= 0.0.0)
-    ulimit (>= 0.1.2)
   ruby-install (0.2.0)
     git (>= 0.0.0)
   runit (3.0.5)

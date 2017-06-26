@@ -36,7 +36,7 @@ service ssh stop
 service mysql-default stop
 service apache2 stop
 service elasticsearch stop
-service redis6379 stop
+service redis-server stop
 echo "Services stopped."
 
 # start services
@@ -70,10 +70,10 @@ service apache2 start
 # - elasticsearch
 service elasticsearch start
 # - redis
-if test -e /var/run/redis/6379/redis_6379.pid
+if test -e /var/run/redis/redis-server.pid
 then
-    rm /var/run/redis/6379/redis_6379.pid
+    rm /var/run/redis/redis-server.pid
 fi
-service redis6379 start
+service redis-server start
 echo "Services started."
 echo "The default password of the webserver user and the database root user is: qweqwe"
