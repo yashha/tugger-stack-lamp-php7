@@ -23,6 +23,10 @@ end
 elasticsearch_configure 'my_elasticsearch' do
   logging({:"action" => 'INFO'})
 
+  nofile_limit ''
+  memlock_limit ''
+  max_map_count ''
+
   configuration ({
     'node.name' => 'webproject'
   })
