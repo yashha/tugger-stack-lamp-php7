@@ -27,7 +27,7 @@ include_recipe "php::module_ldap"
 #include_recipe "apache2::mod_php"
 
 # Install extra php packages
-['imagemagick', 'php-imagick', 'libapache2-mod-php7.0', 'php-intl', 'php-mbstring', 'php-imap', 'php-mcrypt', 'php-simplexml', 'php-memcache', 'php-redis', 'php-xdebug', 'php-dev'].each do |a_package|
+['imagemagick', 'php-imagick', 'libapache2-mod-php7.0', 'php-intl', 'php-mbstring', 'php-imap', 'php-mcrypt', 'php-simplexml', 'php-zip', 'php-memcache', 'php-redis', 'php-xdebug', 'php-dev'].each do |a_package|
   package a_package
 end
 
