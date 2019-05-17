@@ -95,7 +95,8 @@
                 "name": "gulp-cli"
             },
             {
-                "name": "jspm"
+                "name": "jspm",
+                "version": "0.16.53"
             },
             {
                 "name": "bless",
