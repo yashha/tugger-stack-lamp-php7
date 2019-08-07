@@ -107,7 +107,7 @@
     "ruby-install": {
         "rubies": [
             {
-                "ruby": "ruby 2.3.0",
+                "ruby": "ruby 2.5.0",
                 "gems": [
                     {
                         "name": "sass",
